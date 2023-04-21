@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Votación</title>
+</head>
+<body>
+    <main>
+        <div class="main__container container">
+            <div class="main__container--title">
+                <h2>Formulario de Votacion</h2>
+            </div>
+            <div class="main__container--content">
+                <div class="form__container">
+                    <form method="POST"> 
+                        <label for="nombre">
+                            Nombre y Apellido
+                            <input type="text" name="nombre" id="nombre" placeholder="Ej: Pablo Perez">
+                        </label>
+                        <label for="alias">
+                            Alias
+                            <input type="text" name="alias" id="alias" placeholder="Ej: tualias2023">
+                        </label>
+                        <label for="rut">
+                            RUT
+                            <input type="text" name="rut" id="rut" placeholder="Ej: 11111111-1">
+                        </label>
+                        <label for="email">
+                            E-Mail
+                            <input type="email" name="email" id="email" placeholder="Ej: tucorreo@correo.com">
+                        </label>
+                        <label for="region">
+                            Región
+                            <select name="region" id="region" required>
+                                <option value="" selected disabled>--Seleccione una Región--</option>
+                            </select>
+                        </label>
+                        <label for="comuna">
+                            Comuna
+                            <select name="comuna" id="comuna" required>
+                                <option value="" selected disabled>--Seleccione una Comuna--</option>
+                            </select>
+                        </label>
+                        <label for="candidato">
+                            Candidato
+                            <select name="candidato" id="candidato" required>
+                                <option value="" selected disabled>--Seleccione un Candidato--</option>
+                                <option value="candidato1">Candidato 1</option>
+                                <option value="candidato2">Candidato 2</option>
+                                <option value="candidato3">Candidato 3</option>
+                                <option value="candidato4">Candidato 4</option>
+                            </select>
+                        </label>
+                        <label class="label-enterar">
+                            ¿Como se enteró de nosotros?
+                            <label for="web">
+                                <input type="radio" name="como-enterar" id="web" value="web" required>
+                                Web
+                            </label>
+                            <label for="tv">
+                                <input type="radio" name="como-enterar" id="tv" value="tv" required>
+                                TV
+                            </label>
+                            <label for="rrss">
+                                <input type="radio" name="como-enterar" id="rrss" value="rrss" required>
+                                Redes Sociales
+                            </label>
+                            <label for="amigo">
+                                <input type="radio" name="como-enterar" id="amigo" value="amigo" required>
+                                Amigo
+                            </label>
+                        </label>
+                        <input type="submit" value="Votar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #5b5b5b;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    main {
+        background-color: #ebebe8;
+
+        .main__container {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &--content {
+                .form__container{ 
+                    margin-top: 30px;
+                    form {
+                        border: 1px solid rgba(0, 0, 0, 0.288);
+                        box-shadow: 0px 0px 10px -5px black;
+                        background-color: #f4f4f4;
+                        border-radius: 8px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px 50px;
+                        label {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2px;
+                            margin-top: 10px;
+                            input, select {
+                                border-radius: 5px;
+                                border: 1px solid;
+                                border-color: #e1e1e1;
+                                padding: 2px 5px;                               
+                            }
+                            input {
+                                &::placeholder {
+                                    color: #b1afaf;
+                                }
+                            }
+                        }
+                        .label-enterar {
+                            label {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 10px;
+                            }
+                        }
+                        input[type="submit"] {
+                            margin-top: 20px;
+                            height: 40px;
+                            text-transform: uppercase;
+                            background-color: #a4cc42;
+                            color: white;
+                            font-weight: bold;
+                            border: none;
+                            transition: background-color .2s ease-in;
+                            &:hover {
+                                background-color: #1f9123;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
