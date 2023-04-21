@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.querySelector('form');
-    const url = 'https://'; //Agregar url donde este alojada la aplicación Ej: https://tuweb.com
-    const regionesSelect = document.querySelector('#regiones');
-    const comunasSelect = document.querySelector('#comunas');
 
     const enviarInfo = async (nombre, alias, rut, email, region, comuna, candidato, enterar) => {
 
@@ -19,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formdata.append('enterar', enterar);
         formdata.append('type', 'sendVot');
 
-        const req = await fetch(`${url}/php/guardar-voto.php`, {
+        const req = await fetch(`../php/guardar-voto.php`, {
             method: 'POST',
             body: formdata
         });
@@ -156,6 +153,23 @@ document.addEventListener('DOMContentLoaded', () => {
       var re = /\S+@\S+\.\S+/;
       return re.test(email);
     }
+
+    function cargarCandidatos() {
+			fetch("../php/candidatos.php")
+				.then(response => response.json()) // Convertir la respuesta a formato JSON
+				.then(data => {
+					const selectCandidatos = document.getElementById("candidato");
+					data.forEach(candidato => {
+						const option = document.createElement("option");
+						option.text = candidato;
+						option.value = candidato;
+						selectCandidatos.add(option);
+					});
+				})
+				.catch(error => console.error(error)); 
+		}
+
+    cargarCandidatos();
     
 
     

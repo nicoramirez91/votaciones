@@ -2,14 +2,14 @@ Instalación
 
 Para instalar y ejecutar el proyecto, sigue estos pasos:
 
-Descarga el código fuente desde el repositorio de GitHub utilizando el comando git clone.
+1. Descarga el código fuente desde el repositorio de GitHub utilizando el comando `git clone`.
 
-Carga los archivos en un servidor web.
+2. Carga los archivos en un servidor web.
 
-Crea una base de datos MySQL en el servidor.
+3. Crea una base de datos MySQL en el servidor.
 
-Importa la tabla "votaciones.sql" en la base de datos. El archivo votaciones.sql se encuentra en la carpeta sql del proyecto.
+4. Importa la tabla "votaciones.sql" en la base de datos. El archivo `votaciones.sql` se encuentra en la carpeta `sql` del proyecto.
 
-Abre el archivo php/conexion.php en un editor de texto y modifica los datos de acceso a la base de datos para que coincidan con los de tu servidor.
+5. Importa la tabla "candidatos.sql" en la base de datos. El archivo `candidatos.sql` se encuentra en la carpeta `sql` del proyecto.
 
-Modificar el archivo js/scripts.js en un editor de texto, en la 4ta linea, agregar la url donde este alojada la aplicación
+6. Abre el archivo `php/conexion.php` en un editor de texto y modifica los datos de acceso a la base de datos para que coincidan con los de tu servidor.
