@@ -16,12 +16,12 @@ if ($resultado->num_rows > 0) {
   while($fila = $resultado->fetch_assoc()) {
     array_push($candidatos, $fila["nombre"]);
   }
-  // Convertir el array a JSON y mostrarlo
+
   echo json_encode($candidatos);
 } else {
   echo "No se han encontrado registros.";
 }
 
-// Cerrar la conexión a la base de datos
+
 $conn->close();
 ?>
