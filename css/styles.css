@@ -63,5 +63,19 @@ body main .main__container--content .form__container form input[type=submit] {
 body main .main__container--content .form__container form input[type=submit]:hover {
   background-color: #1f9123;
 }
+body footer {
+  margin-top: 30px;
+  background-color: black;
+  color: #b1afaf;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 5px;
+}
+body footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #b1afaf;
+}
 
 /*# sourceMappingURL=styles.css.map */
